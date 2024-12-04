@@ -1,9 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"Collider",
-  "eventList":[],
+  "%Name":"obj_collider",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"Collider",
+  "name":"obj_collider",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -27,7 +29,13 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":true,
-  "spriteId":null,
-  "spriteMaskId":null,
+  "spriteId":{
+    "name":"Sprite7",
+    "path":"sprites/Sprite7/Sprite7.yy",
+  },
+  "spriteMaskId":{
+    "name":"Sprite7",
+    "path":"sprites/Sprite7/Sprite7.yy",
+  },
   "visible":true,
 }
