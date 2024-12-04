@@ -2,7 +2,7 @@ fcooldown = 0;
 
 maxhp = 100;
 ehealth = 100;
-spd = 10;
+spd = 7;
 stamina = 100;
 maxstamina = 100;
 

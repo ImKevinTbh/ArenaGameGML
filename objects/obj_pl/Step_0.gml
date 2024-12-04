@@ -1,8 +1,8 @@
 
 vspeed = (keyboard_check(ord("S")) - keyboard_check(ord("W"))) * plSpeed;
 hspeed = (keyboard_check(ord("D")) - keyboard_check(ord("A"))) * plSpeed;
+speed = clamp(speed, 0, 14);
 
-image_angle = point_direction(x, y, mouse_x, mouse_y) ;
 
 
 
@@ -14,14 +14,16 @@ if (mouse_check_button(1) && fcooldown < 1)
 fcooldown--
 
 
-if (keyboard_check(vk_space) && stamina > 0 && spd > 0 && !dash = -1)
+if (keyboard_check(vk_space) && stamina > 0 && spd > 0 && dash != -1)
 {
 	dash = 1;
+	speed = clamp(speed, 0, 555);
 	speed *= 2;
-	stamina -= 5;
+	stamina -= 2;
+	image_alpha = 0.4;
 	immunity = true;
 }
-
+	image_alpha = 1;
 if (stamina < 1)
 {
 	dash = -1;
