@@ -28,7 +28,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"Sprite7",
     "path":"sprites/Sprite7/Sprite7.yy",
@@ -37,5 +37,5 @@
     "name":"Sprite7",
     "path":"sprites/Sprite7/Sprite7.yy",
   },
-  "visible":true,
+  "visible":false,
 }

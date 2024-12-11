@@ -12,4 +12,5 @@ lives = 3;
 dash = 0;
 immunity = false;
 
-selected_weapon = 0;
+selected_weapon = 1;
+hassecondwep = false;
