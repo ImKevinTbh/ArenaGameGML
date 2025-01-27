@@ -6,4 +6,4 @@ event_inherited();
 maxhp = 300;
 ehealth = 300;
 spd = 5;
-image_blend = c_gray
+image_blend = c_red
