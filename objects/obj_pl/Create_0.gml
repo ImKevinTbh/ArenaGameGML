@@ -1,13 +1,13 @@
 fcooldown = 0;
 
-maxhp = 100;
-ehealth = 100;
+maxhp = 50;
+ehealth = 50;
 spd = 7;
 stamina = 100;
 maxstamina = 100;
 
 
-lives = 3;
+lives = 2;
 
 dash = 0;
 immunity = false;

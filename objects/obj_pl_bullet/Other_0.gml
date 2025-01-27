@@ -1,1 +1,1 @@
-instance_destroy();
+instance_destroy(); // Get rid of this bullet instance if it leaves the room bounds somehow

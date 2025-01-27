@@ -1,38 +1,17 @@
-if (object_exists(obj_pl))
+if (object_exists(obj_pl)) // Make sure the player exists and is not null
 {
-	move_towards_point(obj_pl.x, obj_pl.y, spd);
+	
+    
+    mp_potential_step(obj_pl.x, obj_pl.y, spd, false); // Go to nearest player, will avoid solid tagged objects
 }
-image_angle = point_direction(obj_pl.x, 0, obj_pl.x, 0);
-if (hspeed < 0) {image_xscale = -1}
-if (hspeed >= 0) {image_xscale = 1}
-if ((ehealth) <= 0)
+image_angle = point_direction(obj_pl.x, 0, obj_pl.x, 0); // angle enemy toward player
+if (hspeed < 0) {image_xscale = -1} // flip sprite if going left
+if (hspeed >= 0) {image_xscale = 1} // unflip sprite if going right
+if ((ehealth) <= 0) // if enemy no have health
 {
 
-	global.pscore += 5;	
-	instance_destroy();
+	global.currentScore += 5;	// add score
+	instance_destroy(); // destroy enemy
 }
 
-if (place_meeting(x + lengthdir_x(speed, direction), y + lengthdir_y(speed, direction), obj_enemy)) 
-{
-speed = -speed;
-direction = round(direction / 90) * 90 + 45;
-alarm[0] = 120;
-}
 
-if (place_meeting(x + lengthdir_x(speed, direction), y + lengthdir_y(speed, direction), obj_enemy_big)) 
-{
-speed = -speed;
-direction = round(direction / 90) * 90 + 45;
-alarm[0] = 120;
-}
-
-if (place_meeting(x + lengthdir_x(speed, direction), y + lengthdir_y(speed, direction), obj_collider)) 
-{
-speed = -speed;
-direction = round(direction / 90) * 90 + 45;
-alarm[0] = 120;
-}
-if (alarm[0] < 0)
-{
-	image_angle = point_direction(obj_pl.x, 0, obj_pl.x, 0);
-}

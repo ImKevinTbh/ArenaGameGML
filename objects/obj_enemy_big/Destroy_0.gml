@@ -3,8 +3,8 @@
 if (!ev_outside)
 {
 	if (random_range(0, 101) < 75)
-	{ instance_create_layer(x, y, layer, obj_pickup); }
+	{ instance_create_layer(x, y, layer, obj_pickup); } // Drop item as pickup
 	else
-	{ instance_create_layer(x, y, layer, obj_enemy); }
+	{ instance_create_layer(x, y, layer, obj_enemy); } // Turn into smaller enemy
 }
-global.totalenemies--;
+global.totalenemies--; // Decrement alive enemies for gamehandler
